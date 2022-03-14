@@ -1,10 +1,10 @@
-<!DOCTYPE public html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>HiltonEN Puerto Vallarta</title>
+        <title>Hilton Puerto Vallarta</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,24 +22,37 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-0 dark:bg-gray-0 sm:items-center py-4 sm:pt-0">
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-0 underline"></a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-0 underline"></a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"></a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
 
           
 
                 <div class="mt-8 bg-white dark:bg-gray-0 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-2 md:grid-cols-6">
-                        <div class="p-7">
-                            <div class="max-w-6xl mx-auto sm:px-7 lg:px-9">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="p-6">
+                            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0  background-position:center top">
                                     <img src="https://cdn.worldvectorlogo.com/logos/hilton-international-1.svg" style="width: 200px; height: 200px;">                
                                 </div>
 
-                                <div class="max-w-6xl mx-auto sm:px-4 lg:px-1">
+                                <div class="max-w-6xl mx-auto sm:px-3 lg:px-2">
                                     <div class="flex justify-center pt-3 sm:justify-start sm:pt-0">
                                         <h2>Hilton Puerto Vallarta</h2>             
                                     </div>
                                    
                                         <div class="flex justify-center pt-3 sm:justify-start sm:pt-0">
-                                            <h3>WELCOME</h3>                 
+                                            <h3>BIENVENIDO/A</h3>                 
                                         </div>
                                 </div>
                                 
@@ -47,47 +60,47 @@
                             
                         </div>
                         <a class="btn btn-center background-position:center top"  style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)";text-align: center; href="https://drive.google.com/uc?export=download&id=1MsGFKTPa8SeT9Ncrz2pUiyr02sI-ITGZ">Guest Service</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)";text-align: center; href="https://drive.google.com/uc?export=download&id=1ikxa2Il0afg3TxLmP4OBluN_5TCFhdjX">Servicios al Huesped</a>
                                 <div>
                                    <h3></h3>              
                                 </div>
                                 <a class="btn btn-center";text-align:center; style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1gqHVpYk4WBBqkrwym5vo8nlAPw48uWwl">Eternity SPA</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1DfAGc5kSs3lau5yyozwrQwatp9guiLIO">Eternity SPA</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1D_yG7gvuFSn7_JsfjZ_44WUS4sGO6iWa">Boutique & Tobacco Shop</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=11jGFaMiyOh-wX1rWeebQI1HNCnNh-omC">Boutique y Tabaqueria</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1RFz_1wWavEAq4RHupovDNtbi8xbI2R2R">Kids Club</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1pnmHOPu835KG3ZgujxiLwS-YLHnwReN4">Club Niños</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1fy3S3RpW6EQzHzU5L43fI6dHWxusUfEJ">Restaurants</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1Dgam3spapJH7jEsVsNsdnK_cCgp6oV2a">Restaurantes</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 20px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1R2Udldd9hHkV8DnSB0-1FoJOTdLAJpOu">Bars</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1Zi47ZzFR0fWVIaRkZyhkIEJ_CrCABanN">Bares</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 15px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1DS9pTDzZZdZSJpeeHlt-OULbYiZrb0G6">Coffee Shops</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1ZqCv3Fs8qO0DVLqvYW-f3Wl7PVHZZrqx">Cafeterias</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 15px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1A19LNU2y-k0T22EqL64q17zwB4vyMI13">Room Services</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1G084-E2Xnazgga3eTFCS2myoBbXxjrhM">Room Services</a>
  <div>
     <h3></h3>              
  </div>
                                 <a class="btn btn-center" style="BORDER: rgb(234, 237, 237) 15px solid; FONT-SIZE: 15pt; FONT-FAMILY: Verdana; 
-                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1nO0Puo8GQFwBah3jSj3bymEhoqeEGPUC">Others Services & MAP</a>
+                                BACKGROUND-COLOR: rgb(233,233,233)" href="https://drive.google.com/uc?export=download&id=1rFbfk8voM0VuwbxfTLsfRjubjO2O0gRl">Otros Servcios y MAPA</a>
                                 
                         </div>
                         </div>
